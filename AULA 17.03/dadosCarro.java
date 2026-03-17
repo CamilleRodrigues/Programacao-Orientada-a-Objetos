@@ -1,3 +1,10 @@
+// Fluxo do programa:
+//	- Criar uma variável n -> coleta o número de carros que serão produzidos;
+//	- Criar um vetor de objetos;
+//	- Criar um laço para criar os objetos;
+//	- Instanciar cada objeto;
+//	- Exibir os dados;
+
 package pkg;
 
 import java.util.Scanner;
