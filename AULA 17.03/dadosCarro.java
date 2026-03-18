@@ -35,13 +35,11 @@ public class dadosCarro {
 		}
 		
 		for(int i = 0; i < n; i++) {
-			System.out.println("\nA marca do carro é: " + carro[i].marca);
-			System.out.println("O modelo do carro é: " + carro[i].modelo);
-			System.out.println("O ano de fabricação do carro é: " + carro[i].anoFabricacao);
+			System.out.println("\nA marca do carro " + (i+1) + " é: " + carro[i].marca);
+			System.out.println("O modelo do carro " + (i+1) + " é: " + carro[i].modelo);
+			System.out.println("O ano de fabricação do carro " + (i+1) + " é: " + carro[i].anoFabricacao);
 		}
 
-  
 	}
 
 }
-
