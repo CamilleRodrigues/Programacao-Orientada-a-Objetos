@@ -2,7 +2,7 @@ package pkg;
 
 import java.util.Scanner;
 
-public class Objetos {
+public class dadosCarro {
 
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner (System.in);
