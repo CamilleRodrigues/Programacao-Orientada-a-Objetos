@@ -1,0 +1,29 @@
+package pkg;
+
+import java.util.Scanner;
+
+public class dadosCarro {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner (System.in);
+		
+		System.out.println("Digite a marca do computador 1: ");
+		String marca = teclado.nextLine();
+		System.out.println("Digite o modelo do computador 1: ");
+		String modelo = teclado.nextLine();
+		System.out.println("Digite o tipo do computador 1: ");
+		String tipo = teclado.nextLine();
+		System.out.println("Digite o preço do computador 1: ");
+		float preco = teclado.nextInt();
+		new Carro(marca, modelo, tipo, preco);
+		
+		marca = "Dell";
+		modelo = "Inspirion 15";
+		tipo = "Notebook";
+		preco = 4999;
+		new Carro(marca, modelo, tipo, preco);
+		
+		teclado.close();
+	}
+
+}
