@@ -7,13 +7,13 @@ public class dadosComputador {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner (System.in);
 		
-		System.out.println("Digite a marca do computador 1: ");
+		System.out.println("Digite a marca do computador: ");
 		String marca = teclado.nextLine();
-		System.out.println("Digite o modelo do computador 1: ");
+		System.out.println("Digite o modelo do computador: ");
 		String modelo = teclado.nextLine();
-		System.out.println("Digite o tipo do computador 1: ");
+		System.out.println("Digite o tipo do computador: ");
 		String tipo = teclado.nextLine();
-		System.out.println("Digite o preço do computador 1: ");
+		System.out.println("Digite o preço do computador: ");
 		float preco = teclado.nextInt();
 		new Carro(marca, modelo, tipo, preco);
 		
