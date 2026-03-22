@@ -1,6 +1,6 @@
 package pkg;
 
-public class Carro {
+public class Computador {
 	public String marca;
 	public String modelo;
 	public String tipo;
