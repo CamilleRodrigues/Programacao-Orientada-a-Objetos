@@ -6,8 +6,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner (System.in);
-		
-		int n = 3;
+
 		for(int i = 0; i < 3; i++) {
 			System.out.println("Digite o nome do aluno " + (i+1) + ": ");
 			String nome = teclado.nextLine();
