@@ -15,13 +15,13 @@ public class dadosComputador {
 		String tipo = teclado.nextLine();
 		System.out.println("Digite o preço do computador: ");
 		float preco = teclado.nextInt();
-		new Carro(marca, modelo, tipo, preco);
+		new Computador(marca, modelo, tipo, preco);
 		
 		marca = "Dell";
 		modelo = "Inspirion 15";
 		tipo = "Notebook";
 		preco = 4999;
-		new Carro(marca, modelo, tipo, preco);
+		new Computador(marca, modelo, tipo, preco);
 		
 		teclado.close();
 	}
