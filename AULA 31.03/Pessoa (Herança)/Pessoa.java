@@ -1,9 +1,12 @@
 package pkg;
 
-public class Pessoa {
+public class Exercicio02 {
     public static void main(String[] args) {
-        Aluno aluno1 = new Aluno("Joao Silva", 19, "2024001ABC");
-        System.out.println(aluno1.toString());
+        Aluno a = new Aluno("Joao", 20, "MT-12345");
+        
+        System.out.println("Nome: " + a.nome);
+        System.out.println("Idade: " + a.idade);
+        System.out.println("Matrícula: " + a.matricula);
     }
 }
 
@@ -11,6 +14,7 @@ class Pessoa {
     String nome;
     int idade;
 
+    // Construtor da Pessoa
     Pessoa(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
@@ -23,10 +27,5 @@ class Aluno extends Pessoa {
     Aluno(String nome, int idade, String matricula) {
         super(nome, idade); 
         this.matricula = matricula;
-    }
-
-    @Override
-    public String toString() {
-        return "Nome: " + nome + " | Idade: " + idade + " | Matrícula: " + matricula;
     }
 }
