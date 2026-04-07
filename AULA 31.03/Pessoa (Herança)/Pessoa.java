@@ -1,6 +1,6 @@
 package pkg;
 
-public class Exercicio02 {
+public class Pessoa {
     public static void main(String[] args) {
         Aluno a = new Aluno("Joao", 20, "MT-12345");
         
