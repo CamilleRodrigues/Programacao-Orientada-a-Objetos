@@ -1,6 +1,6 @@
 package pkg;
 
-public class Exercicio04 {
+public class Funcionario {
     public static void main(String[] args) {
         Gerente g = new Gerente();
         Vendedor v = new Vendedor();
