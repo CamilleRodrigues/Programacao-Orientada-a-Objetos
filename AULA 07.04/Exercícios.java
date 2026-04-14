@@ -158,7 +158,7 @@ public class TestePartitura {
     public static void main(String[] args) {
         Partitura p = new Partitura();
         try {
-            p.registrarAcorde("H"); // O compilador obriga o try-catch aqui
+            p.registrarAcorde("H");
         } catch (AcordeInvalidoException e) {
             System.out.println(e.getMessage());
         }
@@ -184,7 +184,7 @@ class Estoque {
 public class TesteEstoque {
     public static void main(String[] args) {
         Estoque e = new Estoque();
-        e.cortarPeca(50.0); // Não exige try-catch no código, mas vai quebrar se falhar
+        e.cortarPeca(50.0); 
     }
 }
 
@@ -205,7 +205,6 @@ class Negocio {
         try {
             BancoDados.buscarAluno(matricula);
         } catch (Exception e) {
-            // Encapsulando o erro técnico em um erro de negócio
             throw new AlunoNaoEncontradoException("Não foi possível localizar o aluno " + matricula);
         }
     }
