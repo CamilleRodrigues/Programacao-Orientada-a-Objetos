@@ -15,28 +15,100 @@
 //Em vez de interromper o programa no primeiro acorde inválido, capture a AcordeInvalidoException internamente, adicione o acorde falho a uma lista de erros, e continue processando. 
 //Ao final, lance uma nova exceção checked CompassoRejeitadoException contendo todos os acordes que falharam.
 
- 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+enum MotivoErro {
+    NOTA_INEXISTENTE,
+    SINTAXE_ERRADA
+}
 
 class AcordeInvalidoException extends Exception {
-    public AcordeInvalidoException(String msg) { super(msg); }
+    private final MotivoErro motivo;
+
+    public AcordeInvalidoException(String mensagem, MotivoErro motivo) {
+        super(mensagem);
+        this.motivo = motivo;
+    }
+
+    public MotivoErro getMotivo() {
+        return motivo;
+    }
+}
+class CompassoRejeitadoException extends Exception {
+    private List<String> erros;
+
+    public CompassoRejeitadoException(String mensagem, List<String> erros) {
+        super(mensagem);
+        this.erros = erros;
+    }
+
+    public List<String> getErros() {
+        return erros;
+    }
 }
 
 class Partitura {
     public void registrarAcorde(String acorde) throws AcordeInvalidoException {
-        if (!acorde.matches("[ABCDEFG]")) {
-            throw new AcordeInvalidoException("Acorde " + acorde + " não existe!");
+        if (!acorde.matches("^[A-G].*")) {
+            throw new AcordeInvalidoException("Nota inexistente", MotivoErro.NOTA_INEXISTENTE);
         }
-        System.out.println("Acorde registrado.");
+
+        if (acorde.contains("X") || acorde.equals("H#")) {
+            throw new AcordeInvalidoException("Sintaxe inválida", MotivoErro.SINTAXE_ERRADA);
+        }
+
+        System.out.println("Acorde " + acorde + " registrado com sucesso.");
+    }
+
+    public void processarCompasso(List<String> acordes) throws CompassoRejeitadoException {
+        List<String> falhas = new ArrayList<>();
+
+        for (String cadaAcorde : acordes) {
+            try {
+                registrarAcorde(cadaAcorde);
+            } catch (AcordeInvalidoException e) {
+                falhas.add(cadaAcorde + " (Motivo: " + e.getMotivo() + ")");
+            }
+        }
+
+        if (!falhas.isEmpty()) {
+            throw new CompassoRejeitadoException("O compasso possui acordes inválidos.", falhas);
+        }
     }
 }
 
-public class TestePartitura {
+public class Exercicio08 {
     public static void main(String[] args) {
-        Partitura p = new Partitura();
+        Partitura minhaPartitura = new Partitura();
+        Scanner leitor = new Scanner(System.in);
+        List<String> compasso = new ArrayList<>();
+
+        System.out.println("Digite os acordes do compasso ou 'fim' para processar:");
+
+        while (true) {
+            System.out.print("Acorde: ");
+            String entrada = leitor.nextLine().trim();
+
+            if (entrada.equalsIgnoreCase("fim")) {
+                break;
+            }
+
+            if (!entrada.isEmpty()) {
+                compasso.add(entrada);
+            }
+        }
+
         try {
-            p.registrarAcorde("H"); // O compilador obriga o try-catch aqui
-        } catch (AcordeInvalidoException e) {
-            System.out.println(e.getMessage());
+            minhaPartitura.processarCompasso(compasso);
+            System.out.println("Compasso aprovado e registrado!");
+        } catch (CompassoRejeitadoException e) {
+            System.err.println("\nERRO: " + e.getMessage());
+            System.err.println("Acordes problemáticos:");
+            for (String erro : e.getErros()) {
+                System.err.println("-> " + erro);
+            }
         }
     }
 }
