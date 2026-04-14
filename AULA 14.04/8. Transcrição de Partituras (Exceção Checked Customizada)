@@ -1,1 +1,42 @@
+//Crie uma exceção personalizada chamada AcordeInvalidoException que herde de Exception (obrigando o tratamento). 
+//Crie uma classe Partitura com um método registrarAcorde(String acorde). 
+//Se o acorde não contiver as letras C, D, E, F, G, A ou B, lance a exceção. 
+//O aluno deve demonstrar que quem chama registrarAcorde é obrigado pelo compilador a usar try-catch ou propagar com throws.
 
+//A) Aumente a complexidade da classe Partitura. 
+//Modifique registrarAcorde para aceitar cifras complexas (ex: "Bm/A" ou "C7"). 
+//Crie um método de parsing que separa a tônica da extensão. 
+//Se a tônica for inválida, lance AcordeInvalidoException. 
+
+//B) Adicione um enum de erro dentro da exceção customizada (ex: MotivoErro.NOTA_INEXISTENTE, MotivoErro.SINTAXE_ERRADA). 
+//Quando o aluno capturar a AcordeInvalidoException, ele deve ler esse enum e exibir mensagens diferentes com base no motivo. 
+
+//C) Crie um método processarCompasso(List<String> acordes). 
+//Em vez de interromper o programa no primeiro acorde inválido, capture a AcordeInvalidoException internamente, adicione o acorde falho a uma lista de erros, e continue processando. 
+//Ao final, lance uma nova exceção checked CompassoRejeitadoException contendo todos os acordes que falharam.
+
+ 
+
+class AcordeInvalidoException extends Exception {
+    public AcordeInvalidoException(String msg) { super(msg); }
+}
+
+class Partitura {
+    public void registrarAcorde(String acorde) throws AcordeInvalidoException {
+        if (!acorde.matches("[ABCDEFG]")) {
+            throw new AcordeInvalidoException("Acorde " + acorde + " não existe!");
+        }
+        System.out.println("Acorde registrado.");
+    }
+}
+
+public class TestePartitura {
+    public static void main(String[] args) {
+        Partitura p = new Partitura();
+        try {
+            p.registrarAcorde("H"); // O compilador obriga o try-catch aqui
+        } catch (AcordeInvalidoException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
