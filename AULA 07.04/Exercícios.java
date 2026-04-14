@@ -1,4 +1,4 @@
--- EXERCÍCIO 01 
+// EXERCÍCIO 01 
 import java.util.Scanner;
 
 public class Calculadora {
@@ -17,7 +17,7 @@ public class Calculadora {
 }
 
 
--- EXERCÍCIO 02
+// EXERCÍCIO 02
 import java.util.Scanner;
 
 public class EscalaMusical {
@@ -36,7 +36,7 @@ public class EscalaMusical {
 }
 
 
--- EXERCÍCIO 03
+// EXERCÍCIO 03
 import java.util.Scanner;
 
 public class FormularioIdade {
@@ -55,7 +55,7 @@ public class FormularioIdade {
 }
 
 
--- EXERCÍCIO 04
+// EXERCÍCIO 04
 public class Catraca {
     public static void validarIngresso(int idade, boolean isSocio) {
         if (!isSocio && idade < 18) {
@@ -74,7 +74,7 @@ public class Catraca {
 }
 
 
--- EXERCÍCIO 05
+// EXERCÍCIO 05
 import java.io.IOException;
 
 public class Marcenaria {
@@ -94,7 +94,7 @@ public class Marcenaria {
 }
 
 
--- EXERCÍCIO 06
+// EXERCÍCIO 06
 public class AlimentadorPet {
     public static void liberarRacao(int gramas) {
         if (gramas < 0) throw new IllegalArgumentException("Quantidade negativa inválida.");
@@ -114,7 +114,7 @@ public class AlimentadorPet {
 }
 
 
--- EXERCÍCIO 07
+// EXERCÍCIO 07
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -140,7 +140,7 @@ public class Hospital {
 }
 
 
--- EXERCÍCIO 08
+// EXERCÍCIO 08
 class AcordeInvalidoException extends Exception {
     public AcordeInvalidoException(String msg) { super(msg); }
 }
@@ -166,7 +166,7 @@ public class TestePartitura {
 }
 
 
--- EXERCÍCIO 09
+// EXERCÍCIO 09
 class MadeiraInsuficienteException extends RuntimeException {
     public MadeiraInsuficienteException(String msg) { super(msg); }
 }
@@ -189,7 +189,7 @@ public class TesteEstoque {
 }
 
 
--- EXERCÍCIO 10
+// EXERCÍCIO 10
 class AlunoNaoEncontradoException extends Exception {
     public AlunoNaoEncontradoException(String msg) { super(msg); }
 }
