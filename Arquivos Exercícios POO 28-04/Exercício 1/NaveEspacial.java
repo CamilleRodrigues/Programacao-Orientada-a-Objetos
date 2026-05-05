@@ -7,7 +7,7 @@ public abstract class NaveEspacial {
     public NaveEspacial(String identificador, double combustivelMaximo, double velocidadeBase) {
         this.identificador = identificador;
         this.combustivelMaximo = combustivelMaximo;
-        this.combustivelAtual = combustivelMaximo; // Regra: começa igual ao máximo [cite: 22]
+        this.combustivelAtual = combustivelMaximo; 
         this.velocidadeBase = velocidadeBase;
     }
 
@@ -22,7 +22,6 @@ public abstract class NaveEspacial {
         System.out.println("A nave [" + identificador + "] viajou " + distancia + " anos-luz. Combustível restante: " + combustivelAtual);
     }
 
-    // Getters e Setters [cite: 23]
     public String getIdentificador() { return identificador; }
     public void setIdentificador(String identificador) { this.identificador = identificador; }
 
@@ -32,7 +31,6 @@ public abstract class NaveEspacial {
     public double getCombustivelAtual() { return combustivelAtual; }
     
     public void setCombustivelAtual(double valor) throws CombustivelInvalidoException {
-        // Regra de Encapsulamento: não negativo e não superior ao máximo [cite: 24, 25]
         if (valor < 0 || valor > combustivelMaximo) {
             throw new CombustivelInvalidoException("Valor de combustível inválido!");
         }
