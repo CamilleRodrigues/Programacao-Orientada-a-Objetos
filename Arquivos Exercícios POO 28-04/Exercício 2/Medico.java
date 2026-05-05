@@ -10,7 +10,7 @@ public class Medico extends FuncionarioHospital {
 
     @Override
     public double calcularSalarioFinal() {
-        return getSalarioBase() + (valorPorPlantao * quantidadePlantoes); //[cite: 1]
+        return getSalarioBase() + (valorPorPlantao * quantidadePlantoes); 
     }
 
     public int getQuantidadePlantoes() { return quantidadePlantoes; }
@@ -18,5 +18,4 @@ public class Medico extends FuncionarioHospital {
         if (quantidade < 0) throw new ValorInvalidoException("A quantidade de plantões não pode ser negativa.");
         this.quantidadePlantoes = quantidade;
     }
-    // Outros getters/setters conforme necessário
 }
