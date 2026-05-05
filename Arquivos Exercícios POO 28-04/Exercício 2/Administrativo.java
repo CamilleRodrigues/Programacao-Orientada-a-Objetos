@@ -10,7 +10,7 @@ public class Administrativo extends FuncionarioHospital {
     @Override
     public double calcularSalarioFinal() {
         double salario = getSalarioBase();
-        if (cargoDeGestao) salario += 1500.0; // Bônus fixo[cite: 1]
+        if (cargoDeGestao) salario += 1500.0; 
         return salario;
     }
 }
