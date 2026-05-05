@@ -5,9 +5,10 @@ public class Main {
     public static void main(String[] args) {
         List<NaveEspacial> frota = new ArrayList<>();
 
-        NaveCargueiro cargueiro = new NaveCargueiro("Titan-01", 1000.0, 50.0, 500.0);
-        NaveCombate combate = new NaveCombate("X-Wing", 800.0, 150.0, 4);
-        NaveExploracao exploracao = new NaveExploracao("Discovery", 500.0, 100.0, true);
+        // Tarefa: trocar para o usuário digitar 
+        NaveCargueiro cargueiro = new NaveCargueiro("Titan-01", 1000.0, 50.0, 500.0); // Chama o método construtor da classe NaveCargueiro
+        NaveCombate combate = new NaveCombate("X-Wing", 800.0, 150.0, 4, true);
+        NaveExploracao exploracao = new NaveExploracao("Discovery", 500.0, 100.0, false);
 
         frota.add(cargueiro);
         frota.add(combate);
@@ -24,7 +25,7 @@ public class Main {
         for (NaveEspacial nave : frota) {
             try {
                 System.out.println("Nave: " + nave.getClass().getSimpleName() + " | ID: " + nave.getIdentificador());
-                nave.viajar(1000.0); 
+                nave.viajar(800.0); 
             } catch (CombustivelInsuficienteException e) {
                 System.out.println("Erro na viagem: " + e.getMessage());
             }
