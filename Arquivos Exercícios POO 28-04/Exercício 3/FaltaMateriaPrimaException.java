@@ -1,13 +1,19 @@
 public class FaltaMateriaPrimaException extends Exception {
-        public FaltaMateriaPrimaException(String msg) { super(msg); }
+        public FaltaMateriaPrimaException(String msg) { 
+                super(msg); 
+        }
     }
 
 public class EquipamentoDescalibradoException extends Exception {
-        public EquipamentoDescalibradoException(String msg) { super(msg); }
+        public EquipamentoDescalibradoException(String msg) { 
+                super(msg); 
+        }
     }
 
 public class SuperaquecimentoException extends Exception {
-        public SuperaquecimentoException(String msg) { super(msg); }
+        public SuperaquecimentoException(String msg) { 
+                super(msg); 
+        }
     }
 
 public abstract class MaquinaIndustrial {
@@ -38,8 +44,19 @@ public abstract class MaquinaIndustrial {
 
     public abstract void produzirLote(int quantidade) throws Exception;
 
-    public String getNumeroSerie() { return numeroSerie; }
-    public boolean isLigada() { return ligada; }
-    public int getPecasProduzidasTotais() { return pecasProduzidasTotais; }
-    public double getEnergiaConsumidaKWh() { return energiaConsumidaKWh; }
+    public String getNumeroSerie() { 
+            return numeroSerie; 
+    }
+        
+    public boolean isLigada() { 
+            return ligada; 
+    }
+        
+    public int getPecasProduzidasTotais() { 
+            return pecasProduzidasTotais; 
+    }
+        
+    public double getEnergiaConsumidaKWh() { 
+            return energiaConsumidaKWh; 
+    }
 }
