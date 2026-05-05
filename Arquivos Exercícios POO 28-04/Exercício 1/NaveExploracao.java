@@ -10,7 +10,7 @@ public class NaveExploracao extends NaveEspacial {
     public double calcularConsumo(double distancia) {
         double consumo = distancia * 0.3;
         if (possuiSensoresAvancados) {
-            consumo += 50.0; // Valor fixo de 50.0 [cite: 54]
+            consumo += 50.0;
         }
         return consumo;
     }
