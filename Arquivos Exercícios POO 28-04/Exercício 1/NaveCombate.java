@@ -11,7 +11,7 @@ public class NaveCombate extends NaveEspacial {
     public double calcularConsumo(double distancia) {
         double consumo = distancia * 0.8;
         if (escudoAtivado) {
-            consumo *= 1.15; // Agravamento de 15% [cite: 48]
+            consumo *= 1.15;
         }
         return consumo;
     }
