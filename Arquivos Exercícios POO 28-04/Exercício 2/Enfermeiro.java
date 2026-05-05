@@ -11,7 +11,7 @@ public class Enfermeiro extends FuncionarioHospital {
         double bonusInsalubridade = getSalarioBase() * percentualInsalubridade;
         double valorHorasExtra = 0;
         if (getHorasTrabalhadasMensais() > 160) {
-            valorHorasExtra = (getHorasTrabalhadasMensais() - 160) * 50.0; //[cite: 1]
+            valorHorasExtra = (getHorasTrabalhadasMensais() - 160) * 50.0;
         }
         return getSalarioBase() + bonusInsalubridade + valorHorasExtra;
     }
