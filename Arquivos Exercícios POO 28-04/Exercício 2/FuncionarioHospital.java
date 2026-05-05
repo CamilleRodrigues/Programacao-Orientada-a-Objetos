@@ -7,7 +7,7 @@ public abstract class FuncionarioHospital {
     public FuncionarioHospital(String nome, String matricula, double salarioBase) {
         this.nome = nome;
         this.matricula = matricula;
-        setSalarioBase(salarioBase); // Valida no construtor[cite: 1]
+        setSalarioBase(salarioBase); 
         this.horasTrabalhadasMensais = 0;
     }
 
@@ -20,7 +20,6 @@ public abstract class FuncionarioHospital {
                            " | Salário Final: R$ " + calcularSalarioFinal());
     }
 
-    // Getters e Setters com Regras de Encapsulamento[cite: 1]
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
 
