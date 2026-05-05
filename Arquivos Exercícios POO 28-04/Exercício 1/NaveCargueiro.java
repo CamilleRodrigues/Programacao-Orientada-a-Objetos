@@ -9,7 +9,6 @@ public class NaveCargueiro extends NaveEspacial {
 
     @Override
     public double calcularConsumo(double distancia) {
-        // Fórmula: (distancia * 0.5) + (pesoCargaAtual * 0.2) [cite: 43]
         return (distancia * 0.5) + (this.pesoCargaAtual * 0.2);
     }
 
