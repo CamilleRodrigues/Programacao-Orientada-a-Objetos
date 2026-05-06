@@ -1,3 +1,4 @@
+//6. Crie uma classe principal para testar a instanciação do objeto, realizar reservas válidas e capturar as exceções com blocos try-catch.
 public class Principal {
     public static void main(String[] args) {
         // 1. Instanciação do objeto
