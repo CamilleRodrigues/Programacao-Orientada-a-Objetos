@@ -1,35 +1,26 @@
-// Um restaurante precisa de um sistema orientado a objetos para modelar seu cardápio e fechar a conta das mesas.
+//2. Crie duas subclasses que herdam de ItemCardapio:
+//PratoPrincipal: 
+//Possui um atributo adicional tempoPreparo. 
+//O método calcularPrecoFinal() retorna o precoBase sem alterações.
 
-//1. Crie uma classe abstrata ItemCardapio com os atributos:
-//nome (String)
-//precoBase (double). 
-//Esta classe deve possuir um método abstrato calcularPrecoFinal().
+public class PratoPrincipal extends ItemCardapio {
+    private double tempoPreparo; // Atributo extra
 
-public abstract class ItemCardapio {
-    private String nome;
-    private double precoBase;
-
-    public ItemCardapio(String nome, double precoBase) { // Método construtor que recebe os atributos das subclasses
-        this.nome = nome;
-        this.precoBase = precoBase; 
+    public PratoPrincipal(String nome, double precoBase, double tempoPreparo) { // Método construtor
+        super(nome, precoBase); // Específicos da classe ItemCardapio (constrtor da classe mãe)
+        this.tempoPreparo = tempoPreparo; // Específico da classe PratoPrincipal
     }
 
-    //Como os atributos estão private, as subclasses não conseguem acessá-los diretamente. Para isso utilizamos getters e setters 
-    public String getNome() {
-        return nome;
+    @Override // "Escreve por cima" do método calcularPrecoFinal da classe ItemCardapio
+    public double calcularPrecoFinal() {
+        return getPrecoBase();
     }
 
-    public double getPrecoBase() {
-        return precoBase;
+    public double getTempoPreparo() { // Não possui condição
+        return tempoPreparo; 
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTempoPreparo(double tempoPreparo) { // Tarefa: tratamento de erro (avisar o usuário)
+            this.tempoPreparo = tempoPreparo;
     }
-
-    public void setPrecoBase(double precoBase) {
-        this.precoBase = precoBase;
-    }
-    
-    public abstract double calcularPrecoFinal(); // A classe que herdar este método abstrato terá que utilizar
 }
