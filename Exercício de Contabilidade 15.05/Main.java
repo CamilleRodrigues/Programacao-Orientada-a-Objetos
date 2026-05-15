@@ -65,6 +65,7 @@ public class Main {
         double receitaLiquida = totalReceita + totalImposto;
         double margemContribuicao = receitaLiquida + totalCusto;
         double ebitda = margemContribuicao + totalDespesas + totalReceitaFinanceira;
+        double percentualEbitda = (ebitda / totalReceita) * 100;
 
         System.out.println("Total Receita: R$ " + totalReceita);
 
@@ -81,5 +82,7 @@ public class Main {
         System.out.println("\nReceita Financeira: R$ " + totalReceitaFinanceira);
 
         System.out.println("\nEBITDA: R$ " + ebitda);
+
+        System.out.println("\nPercentual EBITDA: " + percentualEbitda + "%");
     }
 }
