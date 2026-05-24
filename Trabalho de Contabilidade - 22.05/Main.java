@@ -47,7 +47,6 @@ public class Main {
     // ================= 2024 =================
 
     public static void processarBalanco2024(List<Recursos> lista) {
-
         double ativo = 0;
         double passivo = 0;
         double receita = 0;
@@ -102,7 +101,6 @@ public class Main {
     // ================= 2025 =================
 
     public static void processarBalanco2025(List<Recursos> lista) {
-
         double ativo = 0;
         double passivo = 0;
         double receita = 0;
