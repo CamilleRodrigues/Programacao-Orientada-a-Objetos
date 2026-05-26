@@ -6,7 +6,7 @@ public abstract class Produto {
 
     public Produto(String nome, double preco) { 
         this.nome = nome;
-        this.preco = preco;
+        setPreco(preco);
     }
     
     public String getNome() { 
@@ -25,7 +25,7 @@ public abstract class Produto {
         if(preco < 0) {
             throw new IllegalArgumentException("O preço não pode ser negativo!");
         } 
-        setPreco(preco); 
+        this.preco = preco; 
     }
     
     public abstract double calcularFrete();
