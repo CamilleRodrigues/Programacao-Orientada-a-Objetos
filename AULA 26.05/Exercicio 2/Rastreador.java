@@ -1,0 +1,3 @@
+interface Rastreador {
+    String obterLocalizacao();
+}
