@@ -1,0 +1,3 @@
+interface Compartilhavel {
+    String gerarLink();
+}
