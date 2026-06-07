@@ -1,6 +1,7 @@
 //Classe que representa uma atleta da modalidade Handebol.
 //Herda os atributos e métodos da classe Atleta.
-public class Handebolista extends Atleta implements Avaliavel {
+public class Handebolista extends Atleta {
+
     //Posição em que a atleta joga dentro de quadra.
     private String posicao;
 
@@ -10,7 +11,7 @@ public class Handebolista extends Atleta implements Avaliavel {
     }
 
     //Construtor que recebe os dados da atleta e da modalidade.
-    public Handebolista(String nome, int idade, double altura, String posicao) {
+    public Handebolista(String nome, int idade, double altura, String posicao) throws DadosAtletaInvalidosException {
         super(nome, idade, altura);
         this.posicao = posicao;
     }
@@ -24,21 +25,9 @@ public class Handebolista extends Atleta implements Avaliavel {
     }
 
     //Implementação obrigatória do método abstrato da classe Atleta.
+    //Exibe a posição da atleta dentro da quadra.
     @Override
     public void exibirDadosEspecificos() {
         System.out.println("Posição em quadra: " + posicao);
-    }
-
-    @Override
-    public void adicionarAvaliacao(AvaliacaoFisica avaliacao) {
-        historicoAvaliacoes.add(avaliacao);
-    }
-
-    @Override
-    public void exibirHistorico() {
-        for (AvaliacaoFisica avaliacao : historicoAvaliacoes) {
-            avaliacao.exibirAvaliacao();
-            System.out.println("---------------------");
-        }
     }
 }
