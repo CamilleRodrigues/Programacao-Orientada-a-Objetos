@@ -177,8 +177,7 @@ public class Main {
                         }
 
                         for (int i = 0; i < atletas.size(); i++) {
-                            System.out.println(i + " - " + atletas.get(i).getNome()
-                                    + " (" + atletas.get(i).getModalidade() + ")");
+                            System.out.println(i + " - " + atletas.get(i).getNome() + " (" + atletas.get(i).getModalidade() + ")");
                         }
 
                         System.out.print("\nEscolha a atleta: ");
@@ -260,8 +259,7 @@ public class Main {
                         }
 
                         for (int i = 0; i < atletas.size(); i++) {
-                            System.out.println(i + " - " + atletas.get(i).getNome()
-                                    + " (" + atletas.get(i).getModalidade() + ")");
+                            System.out.println(i + " - " + atletas.get(i).getNome() + " (" + atletas.get(i).getModalidade() + ")");
                         }
 
                         System.out.print("\nEscolha a atleta: ");
@@ -274,8 +272,7 @@ public class Main {
 
                         Atleta atleta = atletas.get(atletaEscolhida);
 
-                        System.out.println("\nAtleta selecionada: "
-                                + atleta.getNome() + " (" + atleta.getModalidade() + ")\n");
+                        System.out.println("\nAtleta selecionada: " + atleta.getNome() + " (" + atleta.getModalidade() + ")\n");
 
                         atleta.exibirHistorico();
                         break;
