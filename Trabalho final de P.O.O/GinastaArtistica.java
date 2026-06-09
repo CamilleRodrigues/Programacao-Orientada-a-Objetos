@@ -30,4 +30,9 @@ public class GinastaArtistica extends Atleta {
     public void exibirDadosEspecificos() {
         System.out.println("Aparelho Principal: " + aparelhoPrincipal);
     }
+
+    @Override
+    public String getModalidade() {
+        return "Ginástica Artística";
+    }
 }
