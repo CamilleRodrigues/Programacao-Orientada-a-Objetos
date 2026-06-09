@@ -7,7 +7,6 @@ public class AvaliacaoFisica {
     private double peso;
     private double percentualGordura;
     private double massaMuscular;
-    private String observacoes;
 
     //É um construtor sem parâmetros que permite criar um objeto vazio
     //Depois os dados podem ser preenchidos usando setters.
@@ -16,12 +15,11 @@ public class AvaliacaoFisica {
     }
 
     //Construtor que recebe os dados da avaliação física.
-    public AvaliacaoFisica(String dataAvaliacao, double peso, double percentualGordura, double massaMuscular, String observacoes) { 
+    public AvaliacaoFisica(String dataAvaliacao, double peso, double percentualGordura, double massaMuscular) { 
         this.dataAvaliacao = dataAvaliacao;
         this.peso = peso;
         this.percentualGordura = percentualGordura;
         this.massaMuscular = massaMuscular; 
-        this.observacoes = observacoes;
     }
     
     public String getDataAvaliacao() { 
@@ -56,21 +54,12 @@ public class AvaliacaoFisica {
         this.massaMuscular = massaMuscular; 
     }
 
-    public String getObservacoes() { 
-        return observacoes; 
-    }
-
-    public void setObservacoes(String observacoes) { 
-        this.observacoes = observacoes; 
-    }
-
     //Exibe na tela todos os dados da avaliação física.
     public void exibirAvaliacao() {
         System.out.println("Data da avaliação: " + dataAvaliacao);
         System.out.println("Peso da atleta: " + peso + " kg");
         System.out.println("Percentual de Gordura da atleta: " + percentualGordura + "%");
         System.out.println("Massa Muscular da atleta: " + massaMuscular + " kg");
-        System.out.println("Observações: " + observacoes);
     }
 }
 
