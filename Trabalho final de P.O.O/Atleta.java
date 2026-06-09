@@ -100,7 +100,8 @@ public abstract class Atleta implements Avaliavel {
 
         for(AvaliacaoFisica avaliacao : historicoAvaliacoes) {
             avaliacao.exibirAvaliacao();
-            System.out.println("---------------------");
         }
     }
+
+    public abstract String getModalidade();
 }
