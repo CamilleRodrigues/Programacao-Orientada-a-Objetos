@@ -30,4 +30,9 @@ public class Handebolista extends Atleta {
     public void exibirDadosEspecificos() {
         System.out.println("Posição em quadra: " + posicao);
     }
+
+    @Override
+    public String getModalidade() {
+        return "Handebol";
+    }
 }
