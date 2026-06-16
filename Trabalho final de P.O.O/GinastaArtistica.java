@@ -5,11 +5,6 @@ public class GinastaArtistica extends Atleta {
     //Aparelho em que a atleta possui maior destaque.
     private String aparelhoPrincipal;
 
-    //Construtor padrão.
-    public GinastaArtistica() {
-        super(); //Chama o construtor padrão da classe Atleta.
-    }
-
     //Construtor que recebe os dados da atleta e da modalidade.
     public GinastaArtistica(String nome, int idade, double altura, String aparelhoPrincipal) throws DadosAtletaInvalidosException {
         super(nome, idade, altura);
