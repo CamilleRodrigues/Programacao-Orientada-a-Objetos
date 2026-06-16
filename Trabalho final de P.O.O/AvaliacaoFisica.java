@@ -8,12 +8,6 @@ public class AvaliacaoFisica {
     private double percentualGordura;
     private double massaMuscular;
 
-    //É um construtor sem parâmetros que permite criar um objeto vazio
-    //Depois os dados podem ser preenchidos usando setters.
-    public AvaliacaoFisica() {
-
-    }
-
     //Construtor que recebe os dados da avaliação física.
     public AvaliacaoFisica(String dataAvaliacao, double peso, double percentualGordura, double massaMuscular) { 
         this.dataAvaliacao = dataAvaliacao;
@@ -62,12 +56,6 @@ public class AvaliacaoFisica {
         System.out.println("Massa Muscular da atleta: " + massaMuscular + " kg");
     }
 }
-
-//Se o professor perguntar:
-//"Por que você criou a classe AvaliacaoFisica em vez de colocar peso e percentual de gordura 
-//diretamente na classe Atleta?"
-
-//Você pode responder:
 //Porque uma atleta realiza várias avaliações ao longo do tempo. 
 //Se os atributos peso, percentual de gordura e massa muscular ficassem na classe Atleta, 
 //apenas os dados mais recentes seriam armazenados. 
