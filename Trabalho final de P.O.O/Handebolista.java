@@ -5,11 +5,6 @@ public class Handebolista extends Atleta {
     //Posição em que a atleta joga dentro de quadra.
     private String posicao;
 
-    //Construtor padrão.
-    public Handebolista() {
-        super(); //Chama o construtor padrão da classe Atleta.
-    }
-
     //Construtor que recebe os dados da atleta e da modalidade.
     public Handebolista(String nome, int idade, double altura, String posicao) throws DadosAtletaInvalidosException {
         super(nome, idade, altura);
